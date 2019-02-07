@@ -36,7 +36,7 @@
       <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
               <li><a href="category.php">Catégories</a></li>
-              <li><a href="logout.php">Logout</a></li>       
+              <li><a href="../logout.php">Logout</a></li>       
           </ul>
       </div>
    </div>  
