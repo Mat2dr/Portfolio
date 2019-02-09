@@ -33,7 +33,7 @@ $categories = $select->fetchAll();
 </div>
 
 
-<div class="container center" > 
+<div class="col-md-12" > 
 <table class="tablet table-striped">
     <thead>
         <tr>

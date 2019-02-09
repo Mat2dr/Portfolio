@@ -23,24 +23,35 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 //inclusion du header
 include 'partials/header.php'; ?>
 
-
-
-<form action="#" method="post">
-    <div class="form-group">
-       <label for="username">Nom d'Utilisateur</label>
+ <body class=" container text-center">
+    <form action="#" method="post">
+      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Only Mathias can LOGIN</h1>
+        <div class="form-group">
+       <label for="username" class="sr-only">Nom d'Utilisateur</label>
         <?= input('username'); ?>
         
     </div>
     <div class="form-group">
-       <label for="password">Password</label>
+       <label for="password" class="sr-only">Password</label>
         <input type="password" class="form-control" id="password" name="password">
     </div>
-    <button type="submit" class="btn btn-default">Se connecter</button>
-</form>
+
+        
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+</body>
+
+
 
 <style>
     
-    .footer{
+    footer{
     position: fixed !important;
     left: 0px;
     right: 0px;

@@ -1,37 +1,17 @@
 <!--Footer-->
 
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Revenir en haut</a></p>
+        <p>&copy; 2019 Dragovic Company &middot; 
+      </footer>
+    </main>
 
-<div class="footer" id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <h4>Contact us.</h4>
-                <p><i class="fas fa-home" aria-hidden="true"></i> Laon, FRANCE </p>
-                <p><i class="fas fa-envelope" aria-hidden="true"></i> dragovic.mathias@gmail.com</p>
-                <p><i class="fas fa-globe" aria-hidden="true"></i> www.dragovicmathias.com</p>
-            </div>
-            
-            <div class="col-lg-4 col-md-4">
-                <h4>About</h4>
-                <p><i class="far fa-square" aria-hidden="true"></i> About Us </p>
-                <p><i class="far fa-square" aria-hidden="true"></i> Privacy </p>
-                <p><i class="far fa-square" aria-hidden="true"></i> Term & Condition </p>
-            </div>
-            
-            <div class="col-lg-4 col-md-4">
-                <h4>Stay in touch</h4>
-                <p><i class="social fab fa-linkedin" aria-hidden="true"></i> Dragovic Mathias </p>
-                <p><i class="social fab fa-instagram" aria-hidden="true"></i> @Mat2dr </p>
-                <input type="email" placeholder="Subscribe for updates"><button class="btn btn-sucess">Subscribe</button>
-            </div>
-            
-            
-        </div>
-    </div>
-</div>
-
-
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  </body>
 
 
 
@@ -69,13 +49,13 @@
 
 
 
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
 
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" ></script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </html>
