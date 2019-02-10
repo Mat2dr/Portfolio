@@ -34,7 +34,7 @@ $categories = $select->fetchAll();
 
 
 <div class="col-md-12" > 
-<table class="tablet table-striped">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>Id</th>
