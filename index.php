@@ -42,7 +42,7 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
+      <div class="container marketing" id="propos">
 
         <div class="row">
             
@@ -59,8 +59,101 @@
                     Intéressé par le Web et le Design, je souhaiterais effectuer une formation afin de me spécialiser dans ce domaine ! 
                 J'ai mis en place ce site afin de vous exposer mon parcours
                 </p>
+                
+                <a class="btn btn-primary" type="button" value="Télécharger" href="documents/CV-mathias-dragovic.pdf"><i class="fa fa-download"> </i> Download</a>
             </div>
         </div>
+          
+          
+                  <hr class="featurette-divider" id="projets">
+          
+          
+        <!--MES PROJETS-->
+
+      <div class="album py-5 bg-light">
+          <div class="text-center">
+          <h2>Mes Projets</h2>
+          </div>
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="images/BG2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="images/BG2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="images/BG2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="images/BG2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+                  <hr class="featurette-divider" id="veille">
+          
+          
+        <!-- VEILLE TECHNOLOGIQUE -->
+          
+          <div class="container center" style="padding:50px;">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                <iframe src="//www.pearltrees.com/mat2dr/veille-technologique/id23988593?embed=2&d=201902101234" width="853" height="604" style="border:0px;" allowtransparency="true"></iframe><span style=" padding-top:50px; color:#818181; font-size:13px;"></span>
+                      </div>
+              </div>
+          </div>
 
         <!-- START THE FEATURETTES -->
 

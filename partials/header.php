@@ -17,23 +17,22 @@
   </head>
   <body>
 
+
       
  <!--Navigation-->
-
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">DRAGOVIC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="login.php">login <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+<header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">PORTFOLIO</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link" href="#propos">A Propos</a>
+            <a class="nav-link" href="#projets">Projets</a>
+            <a class="nav-link" href="#veille">Veille</a>
+            <a class="nav-link" href="#contact">Contact</a> 
+          </nav>
         </div>
-      </nav>
-    </header>
+      </header>
+      </div>
       
 <!--End Navigation-->
