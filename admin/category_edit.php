@@ -50,7 +50,6 @@ include '../partials/admin_header.php';
         <?= input('name'); ?>
         
     </div>
-    <form action="#" method="post">
     <div class="form-group">
        <label for="slug">URL de la catégorie</label>
         <?= input('slug'); ?>

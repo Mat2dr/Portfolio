@@ -40,7 +40,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     
     <title>Connexion</title>
   </head>
-  <body>
+  <body> 
 
  <body class=" container text-center cover heading">
     <form action="#" method="post">
