@@ -30,31 +30,33 @@ if (isset($_POST['name']) && isset($_POST['slug'])) {
         /**
         ENVOIS DES IMAGES
         **/
-        $work_id = $db->quote($_GET['id']);
+		$work_id = $db->quote($_GET['id']);
 		$files = $_FILES['images'];
 		$images = array();
+		foreach ($files['tmp_name'] as $k => $v) {
+			$image = array(
+				'name' => $files['name'][$k],
+				'tmp_name' => $files['tmp_name'][$k]
 
-        $work_id = $db->quote($_GET['id']);
-        $image = $_FILES['images'];
-        $extension = pathinfo($image['name'], PATHINFO_EXTENSION);
-        if(in_array($extension, array('jpg','png'))){
-            $db->query("INSERT INTO images SET work_id=$work_id, name=$name");
-            $image_id = $db->lastInsertId();
-            $image_name = $image_id . '.' . $extension;
-            move_uploaded_file($image['tmp_name'], IMAGES . '/works/' . $image_name);
-            $image_name = $db ->quote($image_name);
-            $db->query("UPDATE images SET name=$image_name WHERE id=$image_id");
-            
-        } 
-        
-        
+			);
+			$extension = pathinfo($image['name'], PATHINFO_EXTENSION);
+			if(in_array($extension, array('jpg','png'))){ 
+				$db->query("INSERT INTO images SET work_id=$work_id, name=$name");
+				$image_id = $db->lastInsertId();
+				$image_name = $image_id . '.' . $extension;
+				move_uploaded_file($image['tmp_name'], IMAGES . '/works/' . $image_name);
+				require '../lib/image.php';
+				resizeImage(IMAGES . '/works/' . $image_name, 150,150);
+				$image_name = $db->quote($image_name);
+				$db->query("UPDATE images SET name=$image_name WHERE id = $image_id");
+			}
+		}
 		header('Location:work.php');
+		die();
 	}else{
 		setFlash('Le slug n\'est pas valide.', 'danger');
 	}
-
 }
-
 
  // une réalisation
 if(isset($_GET['id'])){
@@ -68,6 +70,7 @@ if(isset($_GET['id'])){
 	$_POST = $select->fetch();
 }
 
+
 // liste des catégories
 $select = $db->query('SELECT id, name FROM categories ORDER BY name ASC');
 $categories = $select->fetchAll();
@@ -76,7 +79,35 @@ foreach($categories as $category){
     $categories_list[$category['id']] = $category['name']; 
 }
 
-var_dump($categories_list);
+
+
+//Suppression d'une image sinon sa supprime toute les images
+
+if(isset($_GET['delete_image'])) {
+	checkCsrf();
+	$id = $db->quote($_GET['delete_image']);
+	$select = $db->query("SELECT name, work_id FROM images WHERE id=$id");
+	$image = $select->fetch();
+	var_dump($image['name']);
+	var_dump(glob(IMAGES . '/works/' . pathinfo($image['name'], PATHINFO_FILENAME) . '_*x*.*'));
+	die();
+	unlink(IMAGES . '/works/' . $image['name']);
+	$db->query("DELETE FROM images WHERE id=$id");
+	setFlash("L'image a bien été supprimée");
+	header('Location:work_edit.php?id=' . $image['work_id']);
+	die();
+}
+
+// On récupère la liste des images
+
+if(isset($_GET['id'])) {
+	$work_id = $db->quote($_GET['id']); //Permet d'éviter les images d'une réalisation d'apparaitre dans une autre.
+	$select = $db->query("SELECT id, name FROM images WHERE work_id=$work_id");
+	$images = $select->fetchAll();	
+}else{
+	$images = array();
+}
+
 
 include '../partials/admin_header.php';
 ?>

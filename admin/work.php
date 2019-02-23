@@ -17,9 +17,9 @@ if(isset($_GET['delete'])){
 }
 
 /**
-works
+LES WORKS
 **/
-$select = $db->query('SELECT id, name, slug, content, category_id FROM works');
+$select = $db->query('SELECT id, name, slug FROM works');
 $works = $select->fetchAll();
 
 
@@ -48,8 +48,8 @@ $works = $select->fetchAll();
             <td><?= $category['id']; ?></td>
             <td><?= $category['name']; ?></td>
             <td>
-                <a href="work_edit.php?id=<?= $category['id']; ?>" class="btn tn-default"> Editer</a>
-                <a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error" onclick="return confirm('Sur de sur ?');">Supprimer</a>
+                <a href="work_edit.php?id=<?= $category['id']; ?>" class="btn btn-default"> Editer</a>
+                <a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error" onclick="return confirm('Veux-tu vraiment supprimer cette réalisation?');">Supprimer</a>
             </td> 
         </tr>
         

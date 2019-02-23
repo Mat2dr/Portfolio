@@ -5,8 +5,10 @@ include '../partials/admin_header.php';
 
 
 /**
-SUPPRESSION
+SUPPRESSION D'UNE CATEG.
 **/
+
+
 if(isset($_GET['delete'])){
     checkCsrf();
     $id = $db->quote($_GET['delete']);
@@ -17,7 +19,7 @@ if(isset($_GET['delete'])){
 }
 
 /**
-CATEGORIES
+LES CATEGORIES
 **/
 $select = $db->query('SELECT id, name, slug FROM categories');
 $categories = $select->fetchAll();
@@ -49,7 +51,7 @@ $categories = $select->fetchAll();
             <td><?= $category['name']; ?></td>
             <td>
                 <a href="category_edit.php?id=<?= $category['id']; ?>" class="btn tn-default"> Editer</a>
-                <a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error" onclick="return confirm('Sur de sur ?');">Supprimer</a>
+                <a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error" onclick="return confirm('Veux-tu vraiment supprimer la catégorie');">Supprimer</a>
             </td> 
         </tr>
         
