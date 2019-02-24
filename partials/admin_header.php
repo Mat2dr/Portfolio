@@ -9,6 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
+      <script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=ceuofzmvkuxdi1d0bxbt6j41r792wa6511s1hmh6l1mg3moy"></script>
+      <script>
+  tinymce.init({
+    selector: '#mytextarea'
+  });
+  </script>
 <style>
     
     footer{
@@ -22,7 +28,7 @@
 
 
 </style>
-
+      
     
     <title>Admin</title>
   </head>
