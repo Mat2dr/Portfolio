@@ -48,19 +48,24 @@
             
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <img src="images/mathias.jpg" class="img-fluid rounded-circle">
-                <span class="text-justify">S.Web Developer</span>
+                <span class="text-justify">Etudiant</span>
             </div>
             <div class="col-lg-8 col-md-8 col-sm-12 desc">
      
             <h3>D.Mathias</h3>
                 <p>
                     Je suis actuellement diplômé d'un BTS SIO (Services Informatiques aux Organisations) en spécialité SLAM (Solutions Logicielles et Applications Métiers) effectué au sein du lycée Paul Claudel localisée à Laon (02).<br>
-
-                    Intéressé par le Web et le Design, je souhaiterais effectuer une formation afin de me spécialiser dans ce domaine ! 
-                J'ai mis en place ce site afin de vous exposer mon parcours
                 </p>
                 
-                <a class="btn btn-primary" type="button" value="Télécharger" href="documents/CV-mathias-dragovic.pdf"><i class="fa fa-download"> </i> Download</a>
+                <a class="btn btn-primary" type="button" value="Télécharger" href="documents/CV-mathias-dragovic.pdf"><i class="fa fa-download"> </i> CV</a>
+                <a class="btn btn-primary" type="button" value="Télécharger" href="documents/tableau.xls"><i class="fa fa-download"> </i> Tableau de compétences</a>
+            </div>
+            
+            <div class="container">
+                <h3>Le portfolio est sur github:</h3>
+                <a href="https://github.com/Mat2dr/Portfolio"><i class="fab fa-github 5x "></i></a>
+            
+            
             </div>
         </div>
           
@@ -94,26 +99,12 @@
               <?php endforeach ?>
 
               </div>
-                
-                
-                
-            </div>
-              <div class="col-sm-4">
-                  <ul>
-                    <?php $categorie = $db->query('SELECT slug, name FROM categories')->fetchAll(); ?>
-                      <?php foreach ($categories as $category): ?>
-                        <li>
-                            <a href="<?= WEBROOT; ?>categorie/<?= $category['slug']; ?>">
-                                <?= $category['name'] ?>
-                            </a>
-                        </li>
-                      <?php endforeach ?>
-                      <li></li>
-                  </ul>
-              </div>
+            
           </div>
         </div>
       </div>
+          
+    </div>
           
                   <hr class="featurette-divider" id="veille">
           
@@ -133,6 +124,102 @@
 
 
       </div><!-- /.container -->
+        
+          <!--Section: Contact v.2-->
+<section class="container mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Me contacter</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5"></p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Nom</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Prenom</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">objet</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Envoyer</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Laon, France</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>0780084257</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>dragovic.mathias@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
 
 
 <?php include 'partials/footer.php'; ?>
